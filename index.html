@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portal Académico — Prof. [O teu nome]</title>
+  <meta name="description" content="Portal académico com informação de pesquisa, grupos, disciplinas, orientações e submissão de trabalhos." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="site-header" id="topo">
+    <div class="container header-grid">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">🎓</div>
+        <div class="brand-text">
+          <div class="brand-title">Portal Académico</div>
+          <div class="brand-subtitle">Prof. [O teu nome] • [Universidade/Faculdade]</div>
+        </div>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        ☰
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#pesquisa">Pesquisa</a>
+        <a href="#grupos">Grupos</a>
+        <a href="#disciplinas">Disciplinas</a>
+        <a href="#orientacoes">Orientações</a>
+        <a href="#submissoes">Submissões</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <h1>Informação académica, pesquisa e submissão de trabalhos num só portal.</h1>
+          <p class="lead">
+            Aqui podes encontrar linhas de pesquisa, grupos, disciplinas leccionadas, orientações e um espaço
+            para estudantes submeterem trabalhos académicos.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="#submissoes">Submeter trabalho</a>
+            <a class="btn ghost" href="#pesquisa">Ver pesquisa</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <div class="stat-num" id="statProjetos">—</div>
+              <div class="stat-label">Projectos/Temas</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" id="statGrupos">—</div>
+              <div class="stat-label">Grupos de pesquisa</div>
+            </div>
+            <div class="stat">
+              <div class="stat-num" id="statDisciplinas">—</div>
+              <div class="stat-label">Disciplinas</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card">
+            <div class="card-title">Actualizações</div>
+            <ul class="updates" id="updatesList" aria-live="polite">
+              <!-- preenchido por JS -->
+            </ul>
+            <a class="link" href="#contacto">Queres anunciar um evento? Fala comigo →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="section-head">
+          <h2>Sobre</h2>
+          <p>Perfil académico e áreas de actuação.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Biografia curta</h3>
+            <p>
+              [Escreve aqui 5–8 linhas sobre ti: formação, áreas, experiência, projectos, cargo, etc.]
+            </p>
+            <div class="tags">
+              <span class="tag">Políticas Públicas</span>
+              <span class="tag">Economia</span>
+              <span class="tag">Gestão</span>
+              <span class="tag">Governo Electrónico</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Informação rápida</h3>
+            <ul class="info-list">
+              <li><strong>Instituição:</strong> [Uni/Faculdade]</li>
+              <li><strong>Cidade:</strong> [Ex.: Nampula / Maputo]</li>
+              <li><strong>Email:</strong> <a href="mailto:teuemail@exemplo.com">teuemail@exemplo.com</a></li>
+              <li><strong>Atendimento:</strong> [Dias/horas ou “por marcação”]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PESQUISA -->
+    <section class="section" id="pesquisa">
+      <div class="container">
+        <div class="section-head">
+          <h2>Pesquisa</h2>
+          <p>Linhas, publicações e projectos.</p>
+        </div>
+
+        <div class="toolbar">
+          <input id="searchInput" class="input" type="search" placeholder="Pesquisar (ex.: microfinanças, descentralização, inovação...)" />
+          <select id="filterSelect" class="input">
+            <option value="todos">Todos</option>
+            <option value="artigo">Artigos</option>
+            <option value="projecto">Projectos</option>
+            <option value="capitulo">Capítulos</option>
+          </select>
+        </div>
+
+        <div class="cards" id="pesquisaCards">
+          <!-- preenchido por JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- GRUPOS -->
+    <section class="section" id="grupos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Grupos de Pesquisa</h2>
+          <p>Equipas, temas e como participar.</p>
+        </div>
+
+        <div class="cards" id="gruposCards">
+          <!-- preenchido por JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- DISCIPLINAS -->
+    <section class="section" id="disciplinas">
+      <div class="container">
+        <div class="section-head">
+          <h2>Disciplinas leccionadas</h2>
+          <p>Programas, bibliografia e materiais.</p>
+        </div>
+
+        <div class="cards" id="disciplinasCards">
+          <!-- preenchido por JS -->
+        </div>
+
+        <div class="note">
+          <strong>Dica:</strong> depois podemos criar uma área “Materiais” com links para PDFs, slides e leituras por disciplina.
+        </div>
+      </div>
+    </section>
+
+    <!-- ORIENTAÇÕES -->
+    <section class="section" id="orientacoes">
+      <div class="container">
+        <div class="section-head">
+          <h2>Orientações</h2>
+          <p>Regras, etapas e como submeter um tema.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Como funciona</h3>
+            <ol class="steps">
+              <li>Escolhe um tema alinhado à linha de pesquisa.</li>
+              <li>Define problema, objectivo e metodologia.</li>
+              <li>Submete o tema (ou o trabalho) na secção de Submissões.</li>
+              <li>Recebes confirmação e orientações por email.</li>
+            </ol>
+          </div>
+
+          <div class="card">
+            <h3>Regras básicas</h3>
+            <ul class="bullets">
+              <li>Formato: PDF (preferencial).</li>
+              <li>Nome do ficheiro: <em>Curso_Número_Nome_Tema.pdf</em></li>
+              <li>Normas: [APA / outro].</li>
+              <li>Prazos: conforme calendário da disciplina.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBMISSÕES -->
+    <section class="section" id="submissoes">
+      <div class="container">
+        <div class="section-head">
+          <h2>Submissão de Trabalhos</h2>
+          <p>Os estudantes podem enviar trabalhos académicos e anexar ficheiros.</p>
+        </div>
+
+        <div class="grid-2">
+          <form class="card form" id="submissaoForm">
+            <h3>Formulário</h3>
+
+            <div class="form-row">
+              <label for="nome">Nome do estudante</label>
+              <input class="input" id="nome" name="nome" type="text" required placeholder="Nome completo" />
+            </div>
+
+            <div class="form-row">
+              <label for="numero">Número do estudante</label>
+              <input class="input" id="numero" name="numero" type="text" required placeholder="Ex.: 12345" />
+            </div>
+
+            <div class="form-row">
+              <label for="curso">Curso</label>
+              <input class="input" id="curso" name="curso" type="text" required placeholder="Ex.: Economia e Gestão de Negócios" />
+            </div>
+
+            <div class="form-row">
+              <label for="tipo">Tipo de submissão</label>
+              <select class="input" id="tipo" name="tipo" required>
+                <option value="">Selecionar...</option>
+                <option value="tema">Tema / Proposta</option>
+                <option value="trabalho">Trabalho (disciplina)</option>
+                <option value="monografia">Monografia (versão final)</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="titulo">Título</label>
+              <input class="input" id="titulo" name="titulo" type="text" required placeholder="Título do tema/trabalho" />
+            </div>
+
+            <div class="form-row">
+              <label for="mensagem">Descrição (opcional)</label>
+              <textarea class="input" id="mensagem" name="mensagem" rows="4" placeholder="Resumo, observações, etc."></textarea>
+            </div>
+
+            <div class="form-row">
+              <label for="ficheiro">Anexo (PDF) — fase 1 (simulado)</label>
+              <input class="input" id="ficheiro" name="ficheiro" type="file" accept="application/pdf" />
+              <small class="hint">Nesta versão, o site não guarda ficheiros no servidor. Vamos ligar depois ao Google Drive/Firebase.</small>
+            </div>
+
+            <button class="btn primary" type="submit">Submeter</button>
+
+            <div class="form-result" id="formResult" role="status" aria-live="polite"></div>
+          </form>
+
+          <div class="card">
+            <h3>O que acontece depois?</h3>
+            <p>
+              Nesta fase, o portal valida os dados e gera uma confirmação no ecrã.
+              Na próxima fase, vamos activar:
+            </p>
+            <ul class="bullets">
+              <li>Guardar submissões numa base de dados (Google Sheets / Firestore).</li>
+              <li>Guardar PDFs numa pasta do Google Drive.</li>
+              <li>Gerar recibo/confirmação em PDF com número de submissão.</li>
+              <li>Área do estudante para consultar estado.</li>
+            </ul>
+
+            <div class="divider"></div>
+
+            <h3>Atalho</h3>
+            <p>Se preferires já receber por email, podes colocar um link directo:</p>
+            <a class="btn ghost" href="mailto:teuemail@exemplo.com?subject=Submiss%C3%A3o%20de%20Trabalho%20Acad%C3%A9mico">Enviar por email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-head">
+          <h2>Contacto</h2>
+          <p>Para dúvidas, orientações e parcerias de pesquisa.</p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3>Contactos</h3>
+            <ul class="info-list">
+              <li><strong>Email:</strong> <a href="mailto:teuemail@exemplo.com">teuemail@exemplo.com</a></li>
+              <li><strong>WhatsApp:</strong> <a href="#">[+258 ...]</a></li>
+              <li><strong>Horário:</strong> [por marcação]</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Links</h3>
+            <ul class="info-list">
+              <li><a href="#" target="_blank" rel="noreferrer">Google Scholar</a></li>
+              <li><a href="#" target="_blank" rel="noreferrer">ResearchGate</a></li>
+              <li><a href="#" target="_blank" rel="noreferrer">ORCID</a></li>
+              <li><a href="#" target="_blank" rel="noreferrer">GitHub</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <p>© <span id="year"></span> Portal Académico — Prof. [O teu nome].</p>
+          <a class="link" href="#topo">Voltar ao topo ↑</a>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
